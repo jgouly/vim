@@ -208,6 +208,7 @@ endfunc
 
 " Test 'tabline' with truncated double-width label at the start.
 func Test_tabline_truncated_double_width()
+  set mouse=a
   tabnew
   redraw
   call assert_match('X$', Screenline(1))
