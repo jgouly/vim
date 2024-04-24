@@ -4431,7 +4431,7 @@ draw_tabline(void)
 	}
 
 	// Put an "X" for closing the current tab if there are several.
-	if (tabcount > 1 && (p_mouse && !(*p_mouse == '\0')))
+	if (tabcount > 1 && mouse_has('n')) // (p_mouse && !(*p_mouse == '\0')))
 	{
 	    screen_putchar('X', 0, (int)Columns - 1, attr_nosel);
 	    TabPageIdxs[Columns - 1] = -999;
